@@ -45,5 +45,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     let size: CGFloat = (collectionView.frame.width - totalSpacingBetweenColumns) / columns
     return CGSize(width: size, height: size)
   }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let detailViewController = UIViewController()
+    detailViewController.view.backgroundColor = .systemBackground
+//    [UIColor.red, .blue, .green, .yellow, .purple, .yellow, .systemMint, .cyan, .systemIndigo, .systemPink, .systemTeal].randomElement()?.withAlphaComponent(0.5)
+    detailViewController.title = data[indexPath.row]
+    navigationController?.pushViewController(detailViewController, animated: true)
+  }
 }
 

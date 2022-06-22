@@ -51,5 +51,25 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     detailViewController.selectedData = data[indexPath.row]
     navigationController?.pushViewController(detailViewController, animated: true)
   }
+  
+  @IBAction func insertNewItem() {
+   
+    let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+    let alertActionController = UIAlertController(title: "Add a new Item", message: nil, preferredStyle: .alert)
+    let addAction = UIAlertAction(title: "Add", style: .default) { action in
+      if let textField = alertActionController.textFields?.first,
+         !(textField.text?.isEmpty ?? true) {
+        self.collectionView.performBatchUpdates {
+          self.data.append(textField.text ?? "")
+        }
+      }
+    }
+    alertActionController.addTextField()
+    alertActionController.addAction(addAction)
+    alertActionController.addAction(cancelAction)
+    
+    present(alertActionController, animated: true)
+    
+  }
 }
 

@@ -60,7 +60,13 @@
                             <constraint firstItem="6FB-xP-N32" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wv8-SS-4Uk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home Screen" id="qCu-AN-gds"/>
+                    <navigationItem key="navigationItem" title="Home Screen" id="qCu-AN-gds">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ipV-Tk-huj">
+                            <connections>
+                                <action selector="insertNewItem" destination="BYZ-38-t0r" id="PqJ-9j-RZh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="6FB-xP-N32" id="XG9-wb-IY8"/>
                         <segue destination="XTm-U5-ffq" kind="show" id="B5p-3V-waY"/>

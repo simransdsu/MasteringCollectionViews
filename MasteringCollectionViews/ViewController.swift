@@ -47,10 +47,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let detailViewController = UIViewController()
-    detailViewController.view.backgroundColor = .systemBackground
-//    [UIColor.red, .blue, .green, .yellow, .purple, .yellow, .systemMint, .cyan, .systemIndigo, .systemPink, .systemTeal].randomElement()?.withAlphaComponent(0.5)
-    detailViewController.title = data[indexPath.row]
+    guard let detailViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(DetailViewController.self)") as? DetailViewController else { return }
+    detailViewController.selectedData = data[indexPath.row]
     navigationController?.pushViewController(detailViewController, animated: true)
   }
 }

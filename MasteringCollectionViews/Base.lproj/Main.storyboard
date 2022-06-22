@@ -63,11 +63,48 @@
                     <navigationItem key="navigationItem" title="Home Screen" id="qCu-AN-gds"/>
                     <connections>
                         <outlet property="collectionView" destination="6FB-xP-N32" id="XG9-wb-IY8"/>
+                        <segue destination="XTm-U5-ffq" kind="show" id="B5p-3V-waY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="95.758928571428569"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="W6F-SG-ApM">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XTm-U5-ffq" customClass="DetailViewController" customModule="MasteringCollectionViews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ey4-oZ-KSL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acz-wQ-PFv">
+                                <rect key="frame" x="40" y="281" width="334" height="334"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Acz-wQ-PFv" secondAttribute="height" multiplier="1:1" id="uvs-KI-z3u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="93o-vv-VdD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="93o-vv-VdD" firstAttribute="trailing" secondItem="Acz-wQ-PFv" secondAttribute="trailing" constant="40" id="CxA-eh-Rgk"/>
+                            <constraint firstItem="Acz-wQ-PFv" firstAttribute="centerY" secondItem="ey4-oZ-KSL" secondAttribute="centerY" id="Rpo-zo-cp5"/>
+                            <constraint firstItem="Acz-wQ-PFv" firstAttribute="centerX" secondItem="ey4-oZ-KSL" secondAttribute="centerX" id="jtg-JE-kq6"/>
+                            <constraint firstItem="Acz-wQ-PFv" firstAttribute="leading" secondItem="93o-vv-VdD" secondAttribute="leading" constant="40" id="vQh-IU-sKq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="83y-zH-5px"/>
+                    <connections>
+                        <outlet property="label" destination="Acz-wQ-PFv" id="Og7-33-xzQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DEZ-4b-KlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.9710144927537" y="95.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="i5v-KR-KUY">

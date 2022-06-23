@@ -13,7 +13,7 @@ class ViewController: UIViewController {
   
   var data = ["🍔", "🌭", "🌮", "🌯", "🥙", "🥗", "🥪", "🍕", "🍟", "🍱", "🧆", "🍲", "🍛", "🍜", "🍣", "🍿", "🥟",
               "🍳", "🥞", "🧇", "🍪", "🍩", "🧁", "🍦", "🍮", "🥧", "🍰", "🥡"].shuffled()
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.delegate = self
@@ -53,18 +53,17 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
   }
   
   @IBAction func insertNewItem() {
-   
-    let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+    
     let alertActionController = UIAlertController(title: "Add a new Item", message: nil, preferredStyle: .alert)
-    let addAction = UIAlertAction(title: "Add", style: .default) { action in
-      if let textField = alertActionController.textFields?.first,
-         !(textField.text?.isEmpty ?? true) {
-        self.collectionView.performBatchUpdates {
-          self.data.append(textField.text ?? "")
-        }
-      }
+    let cancelAction = UIAlertAction(title: "☄️", style: .default) { action in
+      self.data.append("☄️")
+      self.collectionView.insertItems(at: [IndexPath(row: self.data.count - 1, section: 0)])
     }
-    alertActionController.addTextField()
+    
+    let addAction = UIAlertAction(title: "✨", style: .default) { action in
+      self.data.insert("✨", at: 0)
+      self.collectionView.insertItems(at: [IndexPath(row: 0, section: 0)])
+    }
     alertActionController.addAction(addAction)
     alertActionController.addAction(cancelAction)
     

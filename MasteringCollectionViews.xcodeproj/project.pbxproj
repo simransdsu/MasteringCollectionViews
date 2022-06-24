@@ -14,6 +14,7 @@
 		49AD99B628617A1500009097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AD99B428617A1500009097 /* Main.storyboard */; };
 		49AD99B828617A1600009097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AD99B728617A1600009097 /* Assets.xcassets */; };
 		49AD99BB28617A1600009097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AD99B928617A1600009097 /* LaunchScreen.storyboard */; };
+		49BE374128640C1200D843B6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BE374028640C1200D843B6 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		49AD99B728617A1600009097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49AD99BA28617A1600009097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AD99BC28617A1600009097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49BE374028640C1200D843B6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,25 @@
 		49AD99AD28617A1500009097 /* MasteringCollectionViews */ = {
 			isa = PBXGroup;
 			children = (
+				49BE373F28640BFC00D843B6 /* Cells */,
 				49AD99AE28617A1500009097 /* AppDelegate.swift */,
 				49AD99B028617A1500009097 /* SceneDelegate.swift */,
 				49AD99B228617A1500009097 /* ViewController.swift */,
+				49A834C82863622C00C3200D /* DetailViewController.swift */,
 				49AD99B428617A1500009097 /* Main.storyboard */,
 				49AD99B728617A1600009097 /* Assets.xcassets */,
 				49AD99B928617A1600009097 /* LaunchScreen.storyboard */,
 				49AD99BC28617A1600009097 /* Info.plist */,
-				49A834C82863622C00C3200D /* DetailViewController.swift */,
 			);
 			path = MasteringCollectionViews;
+			sourceTree = "<group>";
+		};
+		49BE373F28640BFC00D843B6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				49BE374028640C1200D843B6 /* CustomCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				49AD99B328617A1500009097 /* ViewController.swift in Sources */,
 				49AD99AF28617A1500009097 /* AppDelegate.swift in Sources */,
+				49BE374128640C1200D843B6 /* CustomCell.swift in Sources */,
 				49AD99B128617A1500009097 /* SceneDelegate.swift in Sources */,
 				49A834C92863622C00C3200D /* DetailViewController.swift in Sources */,
 			);

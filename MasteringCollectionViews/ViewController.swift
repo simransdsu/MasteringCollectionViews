@@ -28,10 +28,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-    if let label = cell.viewWithTag(100) as? UILabel {
-      label.text = data[indexPath.item]
-    }
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CustomCell
+    cell.itemLabel.text = data[indexPath.row]
     return cell
   }
   

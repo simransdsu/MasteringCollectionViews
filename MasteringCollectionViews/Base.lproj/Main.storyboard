@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="yl5-gS-cg1">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="yl5-gS-cg1" customClass="CustomCell" customModule="MasteringCollectionViews" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="184"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mPg-74-b6v">
@@ -40,13 +40,29 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqk-qZ-d0D">
+                                                    <rect key="frame" x="132" y="132" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="lMV-DL-rmE"/>
+                                                        <constraint firstAttribute="height" constant="44" id="uC6-45-ivB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemMintColor"/>
                                             <constraints>
                                                 <constraint firstItem="Whe-xU-Kp5" firstAttribute="centerX" secondItem="mPg-74-b6v" secondAttribute="centerX" id="9un-A6-frz"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pqk-qZ-d0D" secondAttribute="trailing" constant="8" id="Ecq-r4-Aeu"/>
                                                 <constraint firstItem="Whe-xU-Kp5" firstAttribute="centerY" secondItem="mPg-74-b6v" secondAttribute="centerY" id="Q5W-i3-GNp"/>
+                                                <constraint firstAttribute="bottom" secondItem="Pqk-qZ-d0D" secondAttribute="bottom" constant="8" id="Vxy-HA-2ua"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemLabel" destination="Whe-xU-Kp5" id="yfw-4n-ukt"/>
+                                            <outlet property="selectLabel" destination="Pqk-qZ-d0D" id="na9-yN-Lbq"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -89,7 +105,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Acz-wQ-PFv" secondAttribute="height" multiplier="1:1" id="uvs-KI-z3u"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
